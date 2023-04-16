@@ -1,0 +1,26 @@
+<div>
+    <a routerLink="/games">Back to Games</a>
+</div>
+
+<form [formGroup]="editForm">
+    <div>
+        <label>
+            Name:
+            <input type="text" formControlName="name">
+        </label>
+    </div>
+    <div>
+        <label>
+            Description:
+            <input type="text" formControlName="description">
+        </label>
+    </div>
+    <div>
+        <label>
+            Genre:
+            <input type="text" formControlName="genre">
+        </label>
+    </div>
+    <button (click)="onUpdate()">Update Game</button>
+</form>
+

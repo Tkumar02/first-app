@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { APIService, Game } from '../API.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-games',
@@ -11,7 +12,7 @@ export class GamesComponent implements OnInit {
   public createForm: FormGroup;
   public games: Array<Game> = [];
 
-  constructor(private api:APIService, private fb: FormBuilder){
+  constructor(private api:APIService, private fb: FormBuilder, private router: Router){
     this.createForm = this.fb.group({
       name: ['', Validators.required],
       description: ['',Validators.required],
@@ -36,4 +37,8 @@ export class GamesComponent implements OnInit {
         console.log('error creating game...',e)
       });
   }
+
+  // public editGame (gameId: string) {
+  //   this.router.navigate(['/edit-game-form',gameId])
+  // }
 }

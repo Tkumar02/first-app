@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GamesComponent } from './games/games.component';
+import { EditgamesComponent } from './editgames/editgames.component';
+import { EditGameFormComponent } from './edit-game-form/edit-game-form.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: '/games', pathMatch: 'full'},
+  { path: 'games', component: GamesComponent, pathMatch: 'full'},
+  { path: 'editgames', component: EditgamesComponent},
+  { path: 'edit-game-form/:gameId', component: EditGameFormComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

@@ -8,10 +8,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GamesComponent } from './games/games.component';
+import { EditgamesComponent } from './editgames/editgames.component';
+import { EditGameFormComponent } from './edit-game-form/edit-game-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent, GamesComponent
+    AppComponent, GamesComponent, EditgamesComponent, EditGameFormComponent
   ],
   imports: [
     BrowserModule,

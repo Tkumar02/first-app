@@ -1,0 +1,53 @@
+<p>Edit Game</p>
+<a routerLink="/games">
+    <h3>Back to Games</h3>
+</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Genre</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let game of games">
+            <td>{{game.name}}</td>
+            <td>{{game.description}}</td>
+            <td>{{game.genre}}</td>
+            <td>
+                <button [routerLink]="['/edit-game-form',game.id]">Update Game</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <table>
+    <tr *ngFor="let game of games">
+        <td>{{game.name}}</td>
+        <td>{{game.genre}}</td>
+    </tr>
+</table>
+
+<form>
+    <div class = "form-group">
+        <label for="gameId">Game Id:</label>
+        <input type="text" class="form-control" id="gameId" name="gameId" [(ngModel)]="game.id">
+    </div>
+    <div>
+        <label for="gameName">Game Name:</label>
+        <input type="text" class="form-control" id="gameName" name="gameName" [(ngModel)]="game.name">
+    </div>
+    <div>
+        <label for="gameDescription">Game Description:</label>
+        <input type="text" class="form-control" id="gameName" name="gameDescription" [(ngModel)]="game.description">
+    </div>
+    <div>
+        <label for="gameGenre">Game Genre:</label>
+        <input type="text" class="form-control" id="gameGenre" name="gameGenre" [(ngModel)]="game.genre">
+    </div>
+
+    <button type="submit" (click)="updateGame()">Update Game</button>
+</form> -->
