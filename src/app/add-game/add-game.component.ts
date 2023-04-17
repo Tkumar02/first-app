@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { APIService, Game } from '../API.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-games',
-  templateUrl: './games.component.html',
-  styleUrls: ['./games.component.css']
+  selector: 'app-add-game',
+  templateUrl: './add-game.component.html',
+  styleUrls: ['./add-game.component.css']
 })
-export class GamesComponent implements OnInit {
+export class AddGameComponent {
   public createForm: FormGroup;
   public games: Array<Game> = [];
 
@@ -18,12 +18,6 @@ export class GamesComponent implements OnInit {
       description: ['',Validators.required],
       genre:['',Validators.required]
     });
-  }
-
-  async ngOnInit() {
-    this.api.ListGames().then((event)=> {
-      this.games = event.items as Game[];
-    })
   }
 
   public onCreate(game: Game) {

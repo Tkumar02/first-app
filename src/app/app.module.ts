@@ -10,10 +10,11 @@ import { AppComponent } from './app.component';
 import { GamesComponent } from './games/games.component';
 import { EditgamesComponent } from './editgames/editgames.component';
 import { EditGameFormComponent } from './edit-game-form/edit-game-form.component';
+import { AddGameComponent } from './add-game/add-game.component';
 
 @NgModule({
   declarations: [
-    AppComponent, GamesComponent, EditgamesComponent, EditGameFormComponent
+    AppComponent, GamesComponent, EditgamesComponent, EditGameFormComponent, AddGameComponent
   ],
   imports: [
     BrowserModule,

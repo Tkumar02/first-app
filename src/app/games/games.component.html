@@ -1,31 +1,27 @@
+<h2>Welcome to the BoardGames Listings!</h2>
+
 <a routerLink="/editgames">
     <h3>Edit Games</h3>
 </a> 
-<div class="form-body">
-    <form 
-        autocomplete="off"
-        [formGroup]="createForm"
-        (ngSubmit)="onCreate(createForm.value)"
-    >
-    <div>
-        <label>Name: </label>
-        <input type="text" formControlName="name" autocomplete="off">
-    </div>
-    <div>
-        <label>Description: </label>
-        <input type="text" formControlName="description" autocomplete="off">
-    </div>
-    <div>
-        <label>Genre: </label>
-        <input type="text" formControlName="genre" autocomplete="off">
-    </div>
-    <button type="submit">Submit</button>
-    </form>
-</div>
 
-<div *ngFor="let game of games">
-    <div>{{game?.id}}</div>
-    <div>{{game?.genre}}</div>
-    <div>{{game?.name}}</div>
-    <div>{{game?.description}}</div>
-</div>
+<a routerLink="/add-game">
+    <h3>Add Game</h3>
+</a> 
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let game of games">
+            <td>{{game.name}}</td>
+            <td>{{game.description}}</td>
+            <td>{{game.genre}}</td>
+        </tr>
+    </tbody>
+</table>
