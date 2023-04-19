@@ -4,7 +4,10 @@
       let-user="user"
       let-signOut="signOut"
     >
-      <router-outlet></router-outlet>
-      <button (click)="signOut()">Sign Out</button>
+      <div id="page-wrap">
+        <app-nav-header></app-nav-header>
+        <router-outlet></router-outlet>
+      </div>
+      <button (click)="signOut()" style="background-color: lightgrey; color: black;">Sign Out</button>
     </ng-template>
   </amplify-authenticator>

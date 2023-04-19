@@ -26,15 +26,15 @@ export class GamesComponent implements OnInit {
     })
   }
 
-  public onCreate(game: Game) {
-    this.api
-      .CreateGame(game)
-      .then(()=>{
-        console.log('game created!')
-        this.createForm.reset();
-      })
-      .catch((e)=>{
-        console.log('error creating game...',e)
-      });
-  }
+  // public onCreate(game: Game) {
+  //   this.api
+  //     .CreateGame(game)
+  //     .then(()=>{
+  //       console.log('game created!')
+  //       this.createForm.reset();
+  //     })
+  //     .catch((e)=>{
+  //       console.log('error creating game...',e)
+  //     });
+  // }
 }
